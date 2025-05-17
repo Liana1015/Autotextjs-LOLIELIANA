@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('https://images.unsplash.com/photo-1516321310766-47f7c5b3a728');
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  flex-direction: column;
+  position: relative;
+}
+
+#text {
+  font-size: 2em;
+  text-align: center;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+  animation: neon 1.5s ease-in-out infinite alternate;
+  color: #87CEEB;
+}
+
+@keyframes neon {
+  from { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 50px #ff0000; }
+  to { text-shadow: 0 0 20px #ff00bf, 0 0 30px #ff00bf, 0 0 40px #ff00bf; }
+}
+
+#speed-control {
+  position: fixed;
+  bottom: 20px; /* Jarak dari bawah layar */
+  display: flex;
+  flex-direction: column; /* Mengatur label di atas input */
+  align-items: center; /* Menyelaraskan ke tengah */
+}
+
+#speed-control label {
+  font-size: 1.2em;
+  color: white;
+  margin-bottom: 5px; /* Jarak antara label dan input */
+}
+
+input#speed {
+  width: 50px;
+  padding: 5px;
+  font-size: 18px;
+  background-color: #FFA500;
+  border: none;
+  text-align: center;
+}
